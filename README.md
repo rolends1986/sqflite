@@ -1,3 +1,5 @@
+![Alt text](./screenshot1-2.png)
+
 # sqflite
 
 SQLite plugin for [Flutter](https://flutter.io).
