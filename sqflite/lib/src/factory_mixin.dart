@@ -2,13 +2,13 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:path/path.dart';
-import 'package:sqflite/sqlite_api.dart';
-import 'package:sqflite/src/constant.dart';
-import 'package:sqflite/src/database.dart';
-import 'package:sqflite/src/database_mixin.dart';
-import 'package:sqflite/src/exception.dart';
-import 'package:sqflite/src/factory.dart';
-import 'package:sqflite/src/open_options.dart';
+import 'package:math_sqflite/sqlite_api.dart';
+import 'package:math_sqflite/src/constant.dart';
+import 'package:math_sqflite/src/database.dart';
+import 'package:math_sqflite/src/database_mixin.dart';
+import 'package:math_sqflite/src/exception.dart';
+import 'package:math_sqflite/src/factory.dart';
+import 'package:math_sqflite/src/open_options.dart';
 import 'package:synchronized/synchronized.dart';
 
 abstract class SqfliteDatabaseFactoryBase with SqfliteDatabaseFactoryMixin {}

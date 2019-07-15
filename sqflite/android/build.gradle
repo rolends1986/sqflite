@@ -1,4 +1,4 @@
-def PLUGIN = "sqflite";
+def PLUGIN = "sqlite-android-math";
 def ANDROIDX_WARNING = "flutterPluginsAndroidXWarning";
 gradle.buildFinished { buildResult ->
     if (buildResult.failure && !rootProject.ext.has(ANDROIDX_WARNING)) {
@@ -16,8 +16,10 @@ version '1.0-SNAPSHOT'
 
 buildscript {
     repositories {
+
         google()
         jcenter()
+
     }
 
     dependencies {
@@ -29,6 +31,7 @@ rootProject.allprojects {
     repositories {
         google()
         jcenter()
+        maven { url 'http://maven.test.hsq168.co:8081/repository/maven-releases/' }
     }
 }
 
@@ -48,12 +51,30 @@ android {
     defaultConfig {
         minSdkVersion 16
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            //这里其实我觉可以直接是用"armeabi-v7a"，但国内几个大哥之前使用的都是"armeabi"
+            abiFilters "armeabi-v7a"
+        }
+
     }
     lintOptions {
         disable 'InvalidPackage'
     }
+
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
 }
 
 dependencies {
+    api 'androidx.sqlite:sqlite:2.0.0'
+    api 'androidx.core:core:1.0.1'
     testImplementation 'junit:junit:4.12'
+   // implementation(name:'sqlite-android-math-2.27.3', ext:'aar')
+    //implementation 'io.requery:sqlite-android-math:2.27.5'
+    implementation 'io.requery:sqlite-android-math:2.27.6'
 }

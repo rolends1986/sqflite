@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:sqflite/sqflite.dart';
-import 'package:sqflite/src/factory_mixin.dart' as impl;
+import 'package:math_sqflite/sqflite.dart';
+import 'package:math_sqflite/src/factory_mixin.dart' as impl;
 import 'package:sqflite_example/model/item.dart';
 import 'package:sqflite_example/src/item_widget.dart';
 import 'package:sqflite_example/utils.dart';

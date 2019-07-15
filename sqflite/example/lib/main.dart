@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:sqflite/sqflite.dart';
+import 'package:math_sqflite/sqflite.dart';
 import 'package:sqflite_example/batch_test_page.dart';
 import 'package:sqflite_example/deprecated_test_page.dart';
 import 'package:sqflite_example/exception_test_page.dart';
@@ -10,6 +10,7 @@ import 'package:sqflite_example/exp_test_page.dart';
 import 'package:sqflite_example/manual_test_page.dart';
 import 'package:sqflite_example/src/dev_utils.dart';
 
+import 'math_test_page.dart';
 import 'model/main_item.dart';
 import 'open_test_page.dart';
 import 'raw_test_page.dart';
@@ -29,6 +30,7 @@ class MyApp extends StatefulWidget {
   _MyAppState createState() => _MyAppState();
 }
 
+const String testMathRoute = "/test/math";
 const String testRawRoute = "/test/simple";
 const String testOpenRoute = "/test/open";
 const String testSlowRoute = "/test/slow";
@@ -43,6 +45,7 @@ const String testDeprecatedRoute = "/test/deprecated";
 class _MyAppState extends State<MyApp> {
   var routes = <String, WidgetBuilder>{
     '/test': (BuildContext context) => MyHomePage(),
+    testMathRoute: (BuildContext context) => MathTestPage(),
     testRawRoute: (BuildContext context) => RawTestPage(),
     testOpenRoute: (BuildContext context) => OpenTestPage(),
     testSlowRoute: (BuildContext context) => SlowTestPage(),
@@ -78,6 +81,8 @@ class _MyAppState extends State<MyApp> {
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key) {
+    items.add(
+        MainItem("Math Lib tests", "Math Lib operations", route: testMathRoute));
     items.add(
         MainItem("Raw tests", "Raw SQLite operations", route: testRawRoute));
     items.add(MainItem("Open tests", "Open onCreate/onUpgrade/onDowngrade",

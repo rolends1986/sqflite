@@ -1,14 +1,14 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:sqflite/sqflite.dart';
-import 'package:sqflite/src/exception_impl.dart' as impl;
-import 'package:sqflite/src/factory.dart';
-import 'package:sqflite/src/factory_mixin.dart';
-import 'package:sqflite/src/open_options.dart';
-import 'package:sqflite/src/sqflite_impl.dart' as impl;
+import 'package:math_sqflite/sqflite.dart';
+import 'package:math_sqflite/src/exception_impl.dart' as impl;
+import 'package:math_sqflite/src/factory.dart';
+import 'package:math_sqflite/src/factory_mixin.dart';
+import 'package:math_sqflite/src/open_options.dart';
+import 'package:math_sqflite/src/sqflite_impl.dart' as impl;
 
-export 'package:sqflite/src/open_options.dart';
+export 'package:math_sqflite/src/open_options.dart';
 
 SqfliteDatabaseFactory _databaseFactory;
 

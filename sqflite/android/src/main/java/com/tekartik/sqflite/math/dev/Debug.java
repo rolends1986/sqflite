@@ -1,4 +1,4 @@
-package com.tekartik.sqflite.dev;
+package com.tekartik.sqflite.math.dev;
 
 import android.util.Log;
 

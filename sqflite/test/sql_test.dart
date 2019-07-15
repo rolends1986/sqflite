@@ -1,6 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:sqflite/sql.dart';
+import 'package:math_sqflite/sql.dart';
 
 void main() {
   group("sqflite", () {

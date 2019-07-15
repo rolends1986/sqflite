@@ -1,6 +1,6 @@
 import 'package:flutter/services.dart';
-import 'package:sqflite/src/constant.dart';
-import 'package:sqflite/src/exception.dart';
+import 'package:math_sqflite/src/constant.dart';
+import 'package:math_sqflite/src/exception.dart';
 
 Future<T> wrapDatabaseException<T>(Future<T> action()) async {
   try {

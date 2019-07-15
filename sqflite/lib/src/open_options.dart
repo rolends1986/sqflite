@@ -1,4 +1,4 @@
-import 'package:sqflite/sqlite_api.dart';
+import 'package:math_sqflite/sqlite_api.dart';
 
 ///
 /// Options to open a database

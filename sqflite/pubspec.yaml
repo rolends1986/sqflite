@@ -1,4 +1,4 @@
-name: sqflite
+name: math_sqflite
 author: Tekartik <alex@tekartik.com>
 homepage: https://github.com/tekartik/sqflite
 description: Flutter plugin for SQLite, a self-contained, high-reliability,
@@ -11,7 +11,7 @@ environment:
 
 flutter:
   plugin:
-    androidPackage: com.tekartik.sqflite
+    androidPackage: com.tekartik.sqflite.math
     pluginClass: SqflitePlugin
 
 dependencies:

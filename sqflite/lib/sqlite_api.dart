@@ -1,11 +1,11 @@
 import 'dart:async';
 
-import 'package:sqflite/sql.dart' show ConflictAlgorithm;
-import 'package:sqflite/src/open_options.dart' as impl;
+import 'package:math_sqflite/sql.dart' show ConflictAlgorithm;
+import 'package:math_sqflite/src/open_options.dart' as impl;
 
-export 'package:sqflite/sql.dart' show ConflictAlgorithm;
-export 'package:sqflite/src/constant.dart' show inMemoryDatabasePath;
-export 'package:sqflite/src/exception.dart' show DatabaseException;
+export 'package:math_sqflite/sql.dart' show ConflictAlgorithm;
+export 'package:math_sqflite/src/constant.dart' show inMemoryDatabasePath;
+export 'package:math_sqflite/src/exception.dart' show DatabaseException;
 
 /// Basic databases operations
 abstract class DatabaseFactory {

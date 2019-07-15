@@ -1,10 +1,9 @@
-package com.tekartik.sqflite;
+package com.tekartik.sqflite.math;
+import io.requery.android.database.sqlite.SQLiteDatabase;
 
-import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
-import static com.tekartik.sqflite.Constant.TAG;
+import static com.tekartik.sqflite.math.Constant.TAG;
 
 class Database {
     final boolean singleInstance;

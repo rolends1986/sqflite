@@ -1,8 +1,8 @@
 import 'dart:collection';
 
-import 'package:sqflite/src/constant.dart';
-import 'package:sqflite/src/constant.dart' as constant;
-import 'package:sqflite/src/exception.dart';
+import 'package:math_sqflite/src/constant.dart';
+import 'package:math_sqflite/src/constant.dart' as constant;
+import 'package:math_sqflite/src/exception.dart';
 
 export 'dart:async';
 

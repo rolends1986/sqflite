@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:sqflite/src/exception.dart';
+import 'package:math_sqflite/src/exception.dart';
 
 void main() {
   group("sqflite_exception", () {

@@ -1,6 +1,6 @@
-package com.tekartik.sqflite.operation;
+package com.tekartik.sqflite.math.operation;
 
-import com.tekartik.sqflite.SqlCommand;
+import com.tekartik.sqflite.math.SqlCommand;
 
 /**
  * Created by alex on 09/01/18.

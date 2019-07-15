@@ -1,8 +1,8 @@
-import 'package:sqflite/sqlite_api.dart';
-import 'package:sqflite/src/constant.dart';
-import 'package:sqflite/src/database.dart';
-import 'package:sqflite/src/sql_builder.dart';
-import 'package:sqflite/src/transaction.dart';
+import 'package:math_sqflite/sqlite_api.dart';
+import 'package:math_sqflite/src/constant.dart';
+import 'package:math_sqflite/src/database.dart';
+import 'package:math_sqflite/src/sql_builder.dart';
+import 'package:math_sqflite/src/transaction.dart';
 
 abstract class SqfliteBatch implements Batch {
   final List<Map<String, dynamic>> operations = <Map<String, dynamic>>[];

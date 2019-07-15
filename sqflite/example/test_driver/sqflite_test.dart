@@ -1,5 +1,5 @@
 import 'package:pedantic/pedantic.dart';
-import 'package:sqflite/sqflite.dart';
+import 'package:math_sqflite/sqflite.dart';
 import 'package:test/test.dart';
 
 void main() {

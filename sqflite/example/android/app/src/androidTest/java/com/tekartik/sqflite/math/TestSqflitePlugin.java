@@ -1,4 +1,4 @@
-package com.tekartik.sqflite;
+package com.tekartik.sqflite.math;
 
 import android.content.Context;
 

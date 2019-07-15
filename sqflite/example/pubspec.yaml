@@ -10,10 +10,8 @@ dependencies:
   collection: any
   flutter:
     sdk: flutter
-  sqflite:
-    git:
-      url: git://github.com/tekartik/sqflite
-      path: sqflite
+  math_sqflite:
+     path: ../
 
 
 dev_dependencies:
@@ -47,5 +45,5 @@ flutter:
     - assets/issue_64.db
 
 dependency_overrides:
-  sqflite:
+  math_sqflite:
     path: ../

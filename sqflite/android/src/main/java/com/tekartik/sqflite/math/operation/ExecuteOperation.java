@@ -1,6 +1,6 @@
-package com.tekartik.sqflite.operation;
+package com.tekartik.sqflite.math.operation;
 
-import com.tekartik.sqflite.SqlCommand;
+import com.tekartik.sqflite.math.SqlCommand;
 
 import java.util.HashMap;
 import java.util.Map;

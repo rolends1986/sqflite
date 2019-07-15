@@ -1,19 +1,19 @@
 import 'dart:async';
 
-import 'package:sqflite/src/compat.dart';
-import 'package:sqflite/src/constant.dart';
-import 'package:sqflite/src/factory_impl.dart' show databaseFactory;
-import 'package:sqflite/src/sqflite_impl.dart';
-import 'package:sqflite/src/utils.dart' as impl;
-import 'package:sqflite/utils/utils.dart' as utils;
+import 'package:math_sqflite/src/compat.dart';
+import 'package:math_sqflite/src/constant.dart';
+import 'package:math_sqflite/src/factory_impl.dart' show databaseFactory;
+import 'package:math_sqflite/src/sqflite_impl.dart';
+import 'package:math_sqflite/src/utils.dart' as impl;
+import 'package:math_sqflite/utils/utils.dart' as utils;
 
 import 'sqlite_api.dart';
 
-export 'package:sqflite/sql.dart' show ConflictAlgorithm;
-export 'package:sqflite/src/compat.dart';
-export 'package:sqflite/src/constant.dart'
+export 'package:math_sqflite/sql.dart' show ConflictAlgorithm;
+export 'package:math_sqflite/src/compat.dart';
+export 'package:math_sqflite/src/constant.dart'
     show sqfliteLogLevelNone, sqfliteLogLevelSql, sqfliteLogLevelVerbose;
-export 'package:sqflite/src/factory_impl.dart' show databaseFactory;
+export 'package:math_sqflite/src/factory_impl.dart' show databaseFactory;
 
 export 'sqlite_api.dart';
 

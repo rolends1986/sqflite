@@ -1,15 +1,15 @@
 import 'dart:async';
 
-import 'package:sqflite/sqlite_api.dart';
-import 'package:sqflite/src/batch.dart';
-import 'package:sqflite/src/collection_utils.dart';
-import 'package:sqflite/src/constant.dart' hide lockWarningDuration;
-import 'package:sqflite/src/database.dart';
-import 'package:sqflite/src/exception.dart';
-import 'package:sqflite/src/factory.dart';
-import 'package:sqflite/src/sql_builder.dart';
-import 'package:sqflite/src/transaction.dart';
-import 'package:sqflite/utils/utils.dart';
+import 'package:math_sqflite/sqlite_api.dart';
+import 'package:math_sqflite/src/batch.dart';
+import 'package:math_sqflite/src/collection_utils.dart';
+import 'package:math_sqflite/src/constant.dart' hide lockWarningDuration;
+import 'package:math_sqflite/src/database.dart';
+import 'package:math_sqflite/src/exception.dart';
+import 'package:math_sqflite/src/factory.dart';
+import 'package:math_sqflite/src/sql_builder.dart';
+import 'package:math_sqflite/src/transaction.dart';
+import 'package:math_sqflite/utils/utils.dart';
 import 'package:synchronized/synchronized.dart';
 
 class SqfliteDatabaseBase

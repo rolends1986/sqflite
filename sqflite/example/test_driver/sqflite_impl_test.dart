@@ -1,7 +1,7 @@
 import 'package:path/path.dart';
-import 'package:sqflite/sqflite.dart';
-import 'package:sqflite/src/database_mixin.dart' as impl;
-import 'package:sqflite/src/factory_mixin.dart' as impl;
+import 'package:math_sqflite/sqflite.dart';
+import 'package:math_sqflite/src/database_mixin.dart' as impl;
+import 'package:math_sqflite/src/factory_mixin.dart' as impl;
 
 import 'package:sqflite_example/utils.dart';
 import 'package:test/test.dart';

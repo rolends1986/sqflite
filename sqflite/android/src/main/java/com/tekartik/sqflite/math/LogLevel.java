@@ -1,8 +1,8 @@
-package com.tekartik.sqflite;
+package com.tekartik.sqflite.math;
 
 import io.flutter.plugin.common.MethodCall;
 
-import static com.tekartik.sqflite.Constant.PARAM_LOG_LEVEL;
+import static com.tekartik.sqflite.math.Constant.PARAM_LOG_LEVEL;
 
 public class LogLevel {
 

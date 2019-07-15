@@ -1,4 +1,4 @@
-package com.tekartik.sqflite;
+package com.tekartik.sqflite.math;
 
 import android.util.Log;
 
@@ -8,8 +8,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.tekartik.sqflite.Constant.TAG;
-import com.tekartik.sqflite.dev.Debug;
+import static com.tekartik.sqflite.math.Constant.TAG;
+import com.tekartik.sqflite.math.dev.Debug;
 
 public class SqlCommand {
     public String getSql() {

@@ -1,4 +1,4 @@
-package com.tekartik.sqflite.operation;
+package com.tekartik.sqflite.math.operation;
 
 /**
  * Created by alex on 09/01/18.

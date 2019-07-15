@@ -28,7 +28,7 @@ For help getting started with Flutter, view the online
 Import `sqflite.dart`
 
 ```dart
-import 'package:sqflite/sqflite.dart';
+import 'package:math_sqflite/sqflite.dart';
 ```
 
 ### Opening a database

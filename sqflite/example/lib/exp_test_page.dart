@@ -6,7 +6,7 @@ import 'dart:typed_data';
 
 import 'package:flutter/services.dart';
 import 'package:path/path.dart';
-import 'package:sqflite/sqflite.dart';
+import 'package:math_sqflite/sqflite.dart';
 
 import 'test_page.dart';
 

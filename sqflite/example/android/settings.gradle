@@ -13,3 +13,5 @@ plugins.each { name, path ->
     include ":$name"
     project(":$name").projectDir = pluginDirectory
 }
+//include ":sqlite-android-math"
+//project(":sqlite-android-math").projectDir =new File('D:\\Projects\\NEWHSQ\\sqlite-android\\sqlite-android')

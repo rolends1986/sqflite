@@ -1,4 +1,4 @@
-import 'package:sqflite/src/constant.dart';
+import 'package:math_sqflite/src/constant.dart';
 
 // Wrap sqlite native exception
 abstract class DatabaseException implements Exception {

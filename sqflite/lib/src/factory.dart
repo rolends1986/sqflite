@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:sqflite/sqlite_api.dart';
-import 'package:sqflite/src/database.dart';
+import 'package:math_sqflite/sqlite_api.dart';
+import 'package:math_sqflite/src/database.dart';
 import 'package:synchronized/synchronized.dart';
 
 abstract class SqfliteDatabaseFactory implements DatabaseFactory {
