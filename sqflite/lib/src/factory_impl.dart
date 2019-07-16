@@ -12,15 +12,15 @@ export 'package:math_sqflite/src/open_options.dart';
 
 SqfliteDatabaseFactory _math_databaseFactory;
 
-DatabaseFactory get databaseFactory => sqlfliteDatabaseFactory;
+DatabaseFactory get mathDatabaseFactory => mathSqlfliteDatabaseFactory;
 
-SqfliteDatabaseFactory get sqlfliteDatabaseFactory =>
+SqfliteDatabaseFactory get mathSqlfliteDatabaseFactory =>
     _math_databaseFactory ??= MathSqfliteDatabaseFactoryImpl();
 
 Future<Database> openReadOnlyDatabase(String path) async {
   final SqfliteOpenDatabaseOptions options =
       SqfliteOpenDatabaseOptions(readOnly: true);
-  return sqlfliteDatabaseFactory.openDatabase(path, options: options);
+  return mathSqlfliteDatabaseFactory.openDatabase(path, options: options);
 }
 
 class MathSqfliteDatabaseFactoryImpl with SqfliteDatabaseFactoryMixin {

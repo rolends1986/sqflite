@@ -16,7 +16,7 @@ class _ManualTestPageState extends State<ManualTestPage> {
   Database database;
 
   Future<Database> _openDatabase() async {
-    return database ??= await databaseFactory.openDatabase('manual_test.db');
+    return database ??= await mathDatabaseFactory.openDatabase('manual_test.db');
   }
 
   Future _closeDatabase() async {
@@ -66,7 +66,7 @@ class _ManualTestPageState extends State<ManualTestPage> {
             SqfliteOptions(logLevel: sqfliteLogLevelVerbose));
       }, summary: 'Verbose logs, for debugging'),
       MenuItem('Get info', () async {
-        final factory = databaseFactory as impl.SqfliteDatabaseFactoryMixin;
+        final factory = mathDatabaseFactory as impl.SqfliteDatabaseFactoryMixin;
         var info = await factory.getDebugInfo();
         print(info?.toString());
       }, summary: 'Implementation info (dev only)')

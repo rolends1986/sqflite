@@ -28,7 +28,7 @@ void main() {
     test('close in transaction', () async {
       // await Sqflite.devSetDebugModeOn(true);
       var path = 'test_close_in_transaction.db';
-      var factory = databaseFactory;
+      var factory = mathDatabaseFactory;
       await deleteDatabase(path);
       var db = await factory.openDatabase(path,
           options: OpenDatabaseOptions(version: 1));

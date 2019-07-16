@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:math_sqflite/src/compat.dart';
 import 'package:math_sqflite/src/constant.dart';
-import 'package:math_sqflite/src/factory_impl.dart' show databaseFactory;
+import 'package:math_sqflite/src/factory_impl.dart' show mathDatabaseFactory;
 import 'package:math_sqflite/src/sqflite_impl.dart';
 import 'package:math_sqflite/src/utils.dart' as impl;
 import 'package:math_sqflite/utils/utils.dart' as utils;
@@ -13,7 +13,7 @@ export 'package:math_sqflite/sql.dart' show ConflictAlgorithm;
 export 'package:math_sqflite/src/compat.dart';
 export 'package:math_sqflite/src/constant.dart'
     show sqfliteLogLevelNone, sqfliteLogLevelSql, sqfliteLogLevelVerbose;
-export 'package:math_sqflite/src/factory_impl.dart' show databaseFactory;
+export 'package:math_sqflite/src/factory_impl.dart' show mathDatabaseFactory;
 
 export 'sqlite_api.dart';
 
@@ -147,7 +147,7 @@ Future<Database> openDatabase(String path,
       onOpen: onOpen,
       readOnly: readOnly,
       singleInstance: singleInstance);
-  return databaseFactory.openDatabase(path, options: options);
+  return mathDatabaseFactory.openDatabase(path, options: options);
 }
 
 ///
@@ -163,16 +163,16 @@ Future<Database> openReadOnlyDatabase(String path) =>
 ///
 /// On iOS, it is the Documents directory
 ///
-Future<String> getDatabasesPath() => databaseFactory.getDatabasesPath();
+Future<String> getDatabasesPath() => mathDatabaseFactory.getDatabasesPath();
 
 ///
 /// Delete the database at the given path.
 ///
 Future<void> deleteDatabase(String path) =>
-    databaseFactory.deleteDatabase(path);
+    mathDatabaseFactory.deleteDatabase(path);
 
 ///
 /// Check if a database exists at a given path.
 ///
 Future<bool> databaseExists(String path) =>
-    databaseFactory.databaseExists(path);
+    mathDatabaseFactory.databaseExists(path);

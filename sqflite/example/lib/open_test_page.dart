@@ -76,7 +76,7 @@ class OpenCallbacks {
 
   Future<Database> open(String path, {int version}) async {
     reset();
-    return await databaseFactory.openDatabase(path,
+    return await mathDatabaseFactory.openDatabase(path,
         options: OpenDatabaseOptions(
             version: version,
             onCreate: onCreate,
@@ -89,7 +89,7 @@ class OpenCallbacks {
 
 class OpenTestPage extends TestPage {
   OpenTestPage() : super("Open tests") {
-    var factory = databaseFactory;
+    var factory = mathDatabaseFactory;
 
     test('Databases path', () async {
       // await Sqflite.devSetDebugModeOn(false);
@@ -621,11 +621,11 @@ class OpenTestPage extends TestPage {
       String path = await initDeleteDb("instances_test.db");
       Database db1, db2, db3;
       try {
-        db1 = await databaseFactory.openDatabase(path,
+        db1 = await mathDatabaseFactory.openDatabase(path,
             options: OpenDatabaseOptions(singleInstance: false));
-        db2 = await databaseFactory.openDatabase(path,
+        db2 = await mathDatabaseFactory.openDatabase(path,
             options: OpenDatabaseOptions(singleInstance: true));
-        db3 = await databaseFactory.openDatabase(path,
+        db3 = await mathDatabaseFactory.openDatabase(path,
             options: OpenDatabaseOptions(singleInstance: true));
         expect(db1, isNot(db2));
         expect(db2, db3);
@@ -727,7 +727,7 @@ class OpenTestPage extends TestPage {
     test('open_close_open_no_wait', () async {
       // await Sqflite.devSetDebugModeOn(true);
       var path = 'open_close_open_no_wait.db';
-      var factory = databaseFactory;
+      var factory = mathDatabaseFactory;
       await factory.deleteDatabase(path);
       var db = await factory.openDatabase(path,
           options: OpenDatabaseOptions(version: 1));
@@ -749,7 +749,7 @@ class OpenTestPage extends TestPage {
     test('close in transaction', () async {
       // await Sqflite.devSetDebugModeOn(true);
       var path = 'test_close_in_transaction.db';
-      var factory = databaseFactory;
+      var factory = mathDatabaseFactory;
       await factory.deleteDatabase(path);
       var db = await factory.openDatabase(path,
           options: OpenDatabaseOptions(version: 1));
@@ -768,7 +768,7 @@ class OpenTestPage extends TestPage {
     test('open in transaction', () async {
       // await Sqflite.devSetDebugModeOn(true);
       var path = 'test_close_in_transaction.db';
-      var factory = databaseFactory;
+      var factory = mathDatabaseFactory;
       await factory.deleteDatabase(path);
       var db = await factory.openDatabase(path,
           options: OpenDatabaseOptions(version: 1));
@@ -799,7 +799,7 @@ class OpenTestPage extends TestPage {
 
     test('Open non sqlite file', () async {
       // await Sqflite.devSetDebugModeOn(true);
-      var factory = databaseFactory;
+      var factory = mathDatabaseFactory;
       var path =
           join(await factory.getDatabasesPath(), 'test_non_sqlite_file.db');
 

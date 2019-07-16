@@ -18,7 +18,7 @@ Future devVerbose() async {
 }
 
 void main() {
-  final factory = databaseFactory as impl.SqfliteDatabaseFactoryMixin;
+  final factory = mathDatabaseFactory as impl.SqfliteDatabaseFactoryMixin;
   group('impl', () {
     if (Platform.isIOS || Platform.isAndroid) {
       group('debug_info', () {
