@@ -91,7 +91,7 @@ public class MathSqflitePlugin implements MethodCallHandler {
     // Plugin registration.
     //
     public static void registerWith(Registrar registrar) {
-        final MethodChannel channel = new MethodChannel(registrar.messenger(), "com.tekartik.sqflite");
+        final MethodChannel channel = new MethodChannel(registrar.messenger(), "com.tekartik.math_sqflite");
         channel.setMethodCallHandler(new MathSqflitePlugin(registrar.context()));
     }
 

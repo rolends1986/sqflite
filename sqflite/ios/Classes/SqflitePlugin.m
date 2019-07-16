@@ -3,7 +3,7 @@
 #import <sqlite3.h>
 #import "SqfliteOperation.h"
 
-static NSString *const _channelName = @"com.tekartik.sqflite";
+static NSString *const _channelName = @"com.tekartik.math_sqflite";
 static NSString *const _inMemoryPath = @":memory:";
 
 static NSString *const _methodGetPlatformVersion = @"getPlatformVersion";

@@ -6,7 +6,7 @@ import 'services_impl.dart';
 export 'package:math_sqflite/src/collection_utils.dart';
 export 'package:math_sqflite/src/utils.dart';
 
-const String channelName = 'com.tekartik.sqflite';
+const String channelName = 'com.tekartik.math_sqflite';
 
 const MethodChannel channel = MethodChannel(channelName);
 
