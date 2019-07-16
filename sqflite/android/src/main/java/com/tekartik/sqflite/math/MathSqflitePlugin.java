@@ -61,9 +61,9 @@ import static com.tekartik.sqflite.math.Constant.PARAM_SQL_ARGUMENTS;
 import static com.tekartik.sqflite.math.Constant.TAG;
 
 /**
- * SqflitePlugin Android implementation
+ * MathSqflitePlugin Android implementation
  */
-public class SqflitePlugin implements MethodCallHandler {
+public class MathSqflitePlugin implements MethodCallHandler {
 
     static final Map<String, Integer> _singleInstancesByPath = new HashMap<>();
     static private boolean QUERY_AS_MAP_LIST = false; // set by options
@@ -83,7 +83,7 @@ public class SqflitePlugin implements MethodCallHandler {
     @SuppressLint("UseSparseArrays")
     private final Map<Integer, Database> databaseMap = new HashMap<>();
 
-    SqflitePlugin(Context context) {
+    MathSqflitePlugin(Context context) {
         this.context = context;
     }
 
@@ -92,7 +92,7 @@ public class SqflitePlugin implements MethodCallHandler {
     //
     public static void registerWith(Registrar registrar) {
         final MethodChannel channel = new MethodChannel(registrar.messenger(), "com.tekartik.sqflite");
-        channel.setMethodCallHandler(new SqflitePlugin(registrar.context()));
+        channel.setMethodCallHandler(new MathSqflitePlugin(registrar.context()));
     }
 
     private static Object cursorValue(Cursor cursor, int index) {
@@ -458,7 +458,7 @@ public class SqflitePlugin implements MethodCallHandler {
                 if (queryAsMapList) {
                     Map<String, Object> map = cursorRowToMap(cursor);
                     if (LogLevel.hasSqlLevel(database.logLevel)) {
-                        Log.d(TAG, SqflitePlugin.toString(map));
+                        Log.d(TAG, MathSqflitePlugin.toString(map));
                     }
                     results.add(map);
                 } else {
@@ -709,7 +709,7 @@ public class SqflitePlugin implements MethodCallHandler {
         // Generate new id
         int newDatabaseId;
         synchronized (databaseMapLocker) {
-            newDatabaseId = ++SqflitePlugin.this.databaseId;
+            newDatabaseId = ++MathSqflitePlugin.this.databaseId;
         }
         final int databaseId = newDatabaseId;
 
@@ -720,11 +720,11 @@ public class SqflitePlugin implements MethodCallHandler {
         synchronized (databaseMapLocker) {
             // Create handler if necessary
             if (handler == null) {
-                handlerThread = new HandlerThread("Sqflite", SqflitePlugin.THREAD_PRIORITY);
+                handlerThread = new HandlerThread("Sqflite", MathSqflitePlugin.THREAD_PRIORITY);
                 handlerThread.start();
                 handler = new Handler(handlerThread.getLooper());
                 if (LogLevel.hasSqlLevel(database.logLevel)) {
-                    Log.d(TAG, "starting thread" + handlerThread + " priority " + SqflitePlugin.THREAD_PRIORITY);
+                    Log.d(TAG, "starting thread" + handlerThread + " priority " + MathSqflitePlugin.THREAD_PRIORITY);
                 }
             }
             if (LogLevel.hasSqlLevel(database.logLevel)) {
@@ -911,7 +911,7 @@ public class SqflitePlugin implements MethodCallHandler {
         }
         Integer logLevel = LogLevel.getLogLevel(call);
         if (logLevel != null) {
-            SqflitePlugin.logLevel = logLevel;
+            MathSqflitePlugin.logLevel = logLevel;
         }
         result.success(null);
     }

@@ -12,7 +12,7 @@ environment:
 flutter:
   plugin:
     androidPackage: com.tekartik.sqflite.math
-    pluginClass: SqflitePlugin
+    pluginClass: MathSqflitePlugin
 
 dependencies:
   flutter:
