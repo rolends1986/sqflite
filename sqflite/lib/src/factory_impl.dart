@@ -10,12 +10,12 @@ import 'package:math_sqflite/src/sqflite_impl.dart' as impl;
 
 export 'package:math_sqflite/src/open_options.dart';
 
-SqfliteDatabaseFactory _databaseFactory;
+SqfliteDatabaseFactory _math_databaseFactory;
 
 DatabaseFactory get databaseFactory => sqlfliteDatabaseFactory;
 
 SqfliteDatabaseFactory get sqlfliteDatabaseFactory =>
-    _databaseFactory ??= SqfliteDatabaseFactoryImpl();
+    _math_databaseFactory ??= MathSqfliteDatabaseFactoryImpl();
 
 Future<Database> openReadOnlyDatabase(String path) async {
   final SqfliteOpenDatabaseOptions options =
@@ -23,7 +23,7 @@ Future<Database> openReadOnlyDatabase(String path) async {
   return sqlfliteDatabaseFactory.openDatabase(path, options: options);
 }
 
-class SqfliteDatabaseFactoryImpl with SqfliteDatabaseFactoryMixin {
+class MathSqfliteDatabaseFactoryImpl with SqfliteDatabaseFactoryMixin {
   @override
   Future<T> wrapDatabaseException<T>(Future<T> action()) =>
       impl.wrapDatabaseException(action);
