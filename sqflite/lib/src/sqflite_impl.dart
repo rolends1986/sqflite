@@ -6,9 +6,7 @@ import 'services_impl.dart';
 export 'package:math_sqflite/src/collection_utils.dart';
 export 'package:math_sqflite/src/utils.dart';
 
-const String channelName = 'com.tekartik.math_sqflite';
-
-const MethodChannel channel = MethodChannel(channelName);
+const MethodChannel channel = MethodChannel('com.tekartik.math_sqflite');
 
 // Temp flag to test concurrent reads
 final bool supportsConcurrency = false;
