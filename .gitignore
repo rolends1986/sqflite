@@ -20,3 +20,9 @@ pubspec.lock
 .idea/
 *.iml
 .vscode/
+sqflite/example/ios/Runner.xcodeproj
+sqflite/example/ios/Runner.xcworkspace
+sqflite/ios/_Pods.xcodeproj
+sqflite/ios/Example/Podfile.lock
+sqflite/ios/Example/math_sqflite.xcodeproj 
+sqflite/ios/Example/math_sqflite.xcworkspace

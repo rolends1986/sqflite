@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SqfliteOperation.h"
-#import "SqflitePlugin.h"
+#import "MathSqflitePlugin.h"
 
 // Abstract
 @implementation SqfliteOperation
@@ -47,7 +47,7 @@
 
 - (NSArray*)getSqlArguments {
     NSArray* arguments = [dictionary objectForKey:SqfliteParamSqlArguments];
-    return [SqflitePlugin toSqlArguments:arguments];
+    return [MathSqflitePlugin toSqlArguments:arguments];
 }
 
 - (bool)getNoResult {
@@ -129,7 +129,7 @@
 
 - (NSArray*)getSqlArguments {
     NSArray* arguments = flutterMethodCall.arguments[SqfliteParamSqlArguments];
-    return [SqflitePlugin toSqlArguments:arguments];
+    return [MathSqflitePlugin toSqlArguments:arguments];
 }
 
 - (void)success:(NSObject*)results {
