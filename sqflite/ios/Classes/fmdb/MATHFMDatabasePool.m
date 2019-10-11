@@ -6,7 +6,7 @@
 //  Copyright 2011 Flying Meat Inc. All rights reserved.
 //
 
-#import "../sqlite3ext.h"
+#import "../sqlite/sqlite3ext.h"
 
 #import "MATHFMDatabasePool.h"
 #import "MATHFMDatabase.h"

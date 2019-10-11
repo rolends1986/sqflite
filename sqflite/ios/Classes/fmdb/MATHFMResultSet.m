@@ -2,7 +2,7 @@
 #import "MATHFMDatabase.h"
 #import <unistd.h>
 
-#import "../sqlite3.h"
+#import "../sqlite/sqlite3.h"
 
 @interface FMDatabase ()
 - (void)resultSetDidClose:(FMResultSet *)resultSet;

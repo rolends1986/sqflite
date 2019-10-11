@@ -6,10 +6,10 @@
 //
 #import <Flutter/Flutter.h>
 
-#ifndef SqfliteOperation_h
-#define SqfliteOperation_h
+#ifndef MathSqfliteOperation_h
+#define MathSqfliteOperation_h
 
-@interface SqfliteOperation : NSObject
+@interface MathSqfliteOperation : NSObject
 
 - (NSString*)getMethod;
 - (NSString*)getSql;
@@ -21,7 +21,7 @@
 
 @end
 
-@interface SqfliteBatchOperation : SqfliteOperation
+@interface MathSqfliteBatchOperation : MathSqfliteOperation
 
 @property (atomic, retain) NSDictionary* dictionary;
 @property (atomic, retain) NSObject* results;
@@ -35,12 +35,12 @@
 
 @end
 
-@interface SqfliteMethodCallOperation : SqfliteOperation
+@interface MathSqfliteMethodCallOperation : MathSqfliteOperation
 
 @property (atomic, retain) FlutterMethodCall* flutterMethodCall;
 @property (atomic, assign) FlutterResult flutterResult;
 
-+ (SqfliteMethodCallOperation*)newWithCall:(FlutterMethodCall*)flutterMethodCall result:(FlutterResult)flutterResult;
++ (MathSqfliteMethodCallOperation*)newWithCall:(FlutterMethodCall*)flutterMethodCall result:(FlutterResult)flutterResult;
 
 @end
 

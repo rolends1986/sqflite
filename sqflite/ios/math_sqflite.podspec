@@ -20,7 +20,7 @@ A new flutter plugin project.
   s.author           = { '老王啊' => '13396196332@163.com' }
  
   s.source           = { :path => '.' }
-  s.source_files = 'Classes/*','Classes/fmdb/*'
+  s.source_files = 'Classes/*','Classes/fmdb/*','Classes/sqlite/*'
  
   s.public_header_files = 'Classes/*.h'
 

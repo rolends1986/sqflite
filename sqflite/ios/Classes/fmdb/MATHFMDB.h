@@ -2,7 +2,7 @@
 
 FOUNDATION_EXPORT double FMDBVersionNumber;
 FOUNDATION_EXPORT const unsigned char FMDBVersionString[];
-#import "../sqlite3ext.h"
+#import "../sqlite/sqlite3ext.h"
 #import "MATHFMDatabase.h"
 #import "MATHFMResultSet.h"
 #import "MATHFMDatabaseAdditions.h"

@@ -2,7 +2,7 @@
 
 #import "sqlite3ext.h"
 #import "fmdb/MATHFMDB.h"
-#import "SqfliteOperation.h"
+#import "MathSqfliteOperation.h"
 
 static NSString *const _channelName = @"com.tekartik.math_sqflite";
 static NSString *const _inMemoryPath = @":memory:";
@@ -160,7 +160,7 @@ static NSInteger _databaseOpenCount = 0;
     return NO;
 }
 
-- (BOOL)handleError:(FMDatabase*)db operation:(SqfliteOperation*)operation {
+- (BOOL)handleError:(FMDatabase*)db operation:(MathSqfliteOperation*)operation {
     // handle error
     if ([db hadError]) {
         NSMutableDictionary* details = nil;
@@ -264,7 +264,7 @@ static NSInteger _databaseOpenCount = 0;
     return true;
 }
 
-- (bool)executeOrError:(SqfliteDatabase*)database fmdb:(FMDatabase*)db operation:(SqfliteOperation*)operation {
+- (bool)executeOrError:(SqfliteDatabase*)database fmdb:(FMDatabase*)db operation:(MathSqfliteOperation*)operation {
     NSString* sql = [operation getSql];
     NSArray* sqlArguments = [operation getSqlArguments];
     BOOL argumentsEmpty = [MathSqflitePlugin arrayIsEmpy:sqlArguments];
@@ -289,7 +289,7 @@ static NSInteger _databaseOpenCount = 0;
 //
 // query
 //
-- (bool)query:(SqfliteDatabase*)database fmdb:(FMDatabase*)db operation:(SqfliteOperation*)operation {
+- (bool)query:(SqfliteDatabase*)database fmdb:(FMDatabase*)db operation:(MathSqfliteOperation*)operation {
     NSString* sql = [operation getSql];
     NSArray* sqlArguments = [operation getSqlArguments];
     BOOL argumentsEmpty = [MathSqflitePlugin arrayIsEmpy:sqlArguments];
@@ -357,7 +357,7 @@ static NSInteger _databaseOpenCount = 0;
     }
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [database.fmDatabaseQueue inDatabase:^(FMDatabase *db) {
-            SqfliteMethodCallOperation* operation = [SqfliteMethodCallOperation newWithCall:call result:result];
+            MathSqfliteMethodCallOperation* operation = [MathSqfliteMethodCallOperation newWithCall:call result:result];
             [self query:database fmdb:db operation:operation];
         }];
     });
@@ -366,7 +366,7 @@ static NSInteger _databaseOpenCount = 0;
 //
 // insert
 //
-- (bool)insert:(SqfliteDatabase*)database fmdb:(FMDatabase*)db operation:(SqfliteOperation*)operation {
+- (bool)insert:(SqfliteDatabase*)database fmdb:(FMDatabase*)db operation:(MathSqfliteOperation*)operation {
     if (![self executeOrError:database fmdb:db operation:operation]) {
         return false;
     }
@@ -400,7 +400,7 @@ static NSInteger _databaseOpenCount = 0;
     }
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [database.fmDatabaseQueue inDatabase:^(FMDatabase *db) {
-            SqfliteMethodCallOperation* operation = [SqfliteMethodCallOperation newWithCall:call result:result];
+            MathSqfliteMethodCallOperation* operation = [MathSqfliteMethodCallOperation newWithCall:call result:result];
             [self insert:database fmdb:db operation:operation];
         }];
     });
@@ -410,7 +410,7 @@ static NSInteger _databaseOpenCount = 0;
 //
 // update
 //
-- (bool)update:(SqfliteDatabase*)database fmdb:(FMDatabase*)db operation:(SqfliteOperation*)operation {
+- (bool)update:(SqfliteDatabase*)database fmdb:(FMDatabase*)db operation:(MathSqfliteOperation*)operation {
     if (![self executeOrError:database fmdb:db operation:operation]) {
         return false;
     }
@@ -434,7 +434,7 @@ static NSInteger _databaseOpenCount = 0;
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [database.fmDatabaseQueue inDatabase:^(FMDatabase *db) {
-            SqfliteMethodCallOperation* operation = [SqfliteMethodCallOperation newWithCall:call result:result];
+            MathSqfliteMethodCallOperation* operation = [MathSqfliteMethodCallOperation newWithCall:call result:result];
             [self update:database fmdb:db operation:operation];
         }];
     });
@@ -443,7 +443,7 @@ static NSInteger _databaseOpenCount = 0;
 //
 // execute
 //
-- (bool)execute:(SqfliteDatabase*)database fmdb:(FMDatabase*)db operation:(SqfliteOperation*)operation {
+- (bool)execute:(SqfliteDatabase*)database fmdb:(FMDatabase*)db operation:(MathSqfliteOperation*)operation {
     if (![self executeOrError:database fmdb:db operation:operation]) {
         return false;
     }
@@ -458,7 +458,7 @@ static NSInteger _databaseOpenCount = 0;
     }
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [database.fmDatabaseQueue inDatabase:^(FMDatabase *db) {
-            SqfliteMethodCallOperation* operation = [SqfliteMethodCallOperation newWithCall:call result:result];
+            MathSqfliteMethodCallOperation* operation = [MathSqfliteMethodCallOperation newWithCall:call result:result];
             [self execute:database fmdb:db operation:operation];
         }];
     });
@@ -476,7 +476,7 @@ static NSInteger _databaseOpenCount = 0;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [database.fmDatabaseQueue inDatabase:^(FMDatabase *db) {
             
-            SqfliteMethodCallOperation* mainOperation = [SqfliteMethodCallOperation newWithCall:call result:result];
+            MathSqfliteMethodCallOperation* mainOperation = [MathSqfliteMethodCallOperation newWithCall:call result:result];
             bool noResult = [mainOperation getNoResult];
             bool continueOnError = [mainOperation getContinueOnError];
             
@@ -485,7 +485,7 @@ static NSInteger _databaseOpenCount = 0;
             for (NSDictionary* dictionary in operations) {
                 // do something with object
                 
-                SqfliteBatchOperation* operation = [SqfliteBatchOperation new];
+                MathSqfliteBatchOperation* operation = [MathSqfliteBatchOperation new];
                 operation.dictionary = dictionary;
                 operation.noResult = noResult;
                 

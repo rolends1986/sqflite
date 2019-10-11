@@ -10,7 +10,7 @@
 #import "MATHFMDatabaseAdditions.h"
 #import "TargetConditionals.h"
 
-#import "../sqlite3.h"
+#import "../sqlite/sqlite3.h"
 
 @interface FMDatabase (PrivateStuff)
 - (FMResultSet *)executeQuery:(NSString *)sql withArgumentsInArray:(NSArray * _Nullable)arrayArgs orDictionary:(NSDictionary * _Nullable)dictionaryArgs orVAList:(va_list)args;

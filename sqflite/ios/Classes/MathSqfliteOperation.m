@@ -6,11 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SqfliteOperation.h"
+#import "MathSqfliteOperation.h"
 #import "MathSqflitePlugin.h"
 
 // Abstract
-@implementation SqfliteOperation
+@implementation MathSqfliteOperation
 
 - (NSString*)getMethod {
     return  nil;
@@ -33,7 +33,7 @@
 
 @end
 
-@implementation SqfliteBatchOperation
+@implementation MathSqfliteBatchOperation
 
 @synthesize dictionary, results, error, noResult, continueOnError;
 
@@ -97,13 +97,13 @@
 
 @end
 
-@implementation SqfliteMethodCallOperation
+@implementation MathSqfliteMethodCallOperation
 
 @synthesize flutterMethodCall;
 @synthesize flutterResult;
 
-+ (SqfliteMethodCallOperation*)newWithCall:(FlutterMethodCall*)flutterMethodCall result:(FlutterResult)flutterResult {
-    SqfliteMethodCallOperation* operation = [SqfliteMethodCallOperation new];
++ (MathSqfliteMethodCallOperation*)newWithCall:(FlutterMethodCall*)flutterMethodCall result:(FlutterResult)flutterResult {
+    MathSqfliteMethodCallOperation* operation = [MathSqfliteMethodCallOperation new];
     operation.flutterMethodCall = flutterMethodCall;
     operation.flutterResult = flutterResult;
     return operation;

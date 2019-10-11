@@ -9,7 +9,7 @@
 #import "MATHFMDatabaseQueue.h"
 #import "MATHFMDatabase.h"
 
-#import "../sqlite3ext.h"
+#import "../sqlite/sqlite3ext.h"
 
 typedef NS_ENUM(NSInteger, FMDBTransaction) {
     FMDBTransactionExclusive,
