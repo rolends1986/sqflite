@@ -53,7 +53,7 @@ A new flutter plugin project.
      "OTHER_CFLAGS[config=Release][arch=armv6]" => "$(inherited) $(SQLLIBRARY_ARMV6_CFLAGS) $(SQLLIBRARY_CFLAGS) $(SQLLIBRARY_RELEASE_CFLAGS)",
     # "HEADER_SEARCH_PATHS" => '"$(PROJECT_DIR)" "${BUILT_PRODUCTS_DIR}" ',
     
-     "SUPPORTED_PLATFORMS" => "iphoneos"
+     #"SUPPORTED_PLATFORMS" => "iphoneos"
 
     
 
